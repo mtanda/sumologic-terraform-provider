@@ -20,6 +20,11 @@ func resourceSumologicRole() *schema.Resource {
 		},
 
 		Schema: map[string]*schema.Schema{
+			"id": {
+				Type:     schema.TypeString,
+				Required: true,
+				ForceNew: false,
+			},
 			"name": {
 				Type:     schema.TypeString,
 				Required: true,
@@ -31,19 +36,10 @@ func resourceSumologicRole() *schema.Resource {
 				ForceNew: false,
 				Default:  "",
 			},
-			"category": {
-				Type:     schema.TypeString,
-				Optional: true,
-				ForceNew: false,
-				Default:  "",
-			},
-			"timezone": {
-				Type:     schema.TypeString,
-				Optional: true,
-				ForceNew: false,
-				Default:  "Etc/UTC",
-			},
-			"lookup_by_name": {
+			//filterPredicate
+			//users
+			//capabilities
+			"system_defined": {
 				Type:     schema.TypeBool,
 				Optional: true,
 				ForceNew: false,
